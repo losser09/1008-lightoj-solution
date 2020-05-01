@@ -1,1 +1,30 @@
-# 1008-lightoj-solution
+#include<bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+          int t,k=0;
+          cin>>t;
+          while(t--)
+          {
+                    long long int n,x,y,a,b,c;
+                    cin>>n;
+                    printf("Case %d: ",++k);
+                    c=ceil(sqrt(n));
+                    //cout<<c<<endl;
+                   b=n-(c-1)*(c-1);
+                   if(c%2!=0)
+                   {
+                             if(b>c)
+                              cout<<(1+c*c-n)<<" "<<c<<endl;
+                             else cout<<c<<" "<<b<<endl;
+                   }
+                   else
+                   {
+                             if(b>c)
+                              cout<<c<<" "<<(1+c*c-n)<<endl;
+                             else cout<<b<<" "<<c<<endl;
+                   }
+
+          }
+}
